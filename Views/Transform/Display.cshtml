@@ -1,0 +1,54 @@
+﻿@model trackplan.Models.Word;
+@{
+    ViewData["Title"] = "Display";
+    var length = Model.WordContent.Length;
+}
+
+
+    <table>
+        <tbody>
+            @for(var i = 0; i < length;i++)
+            {
+                <tr>
+                    @for(var j=0; j< length;j++)
+                    {
+                        <td class="cell">
+                            @if(i==j){
+                                <span>
+                                    @Model.WordContent[@i]
+                                
+                                </span>
+                            }
+                        </td>
+                    }
+                </tr>
+            }
+ 
+        <tr>
+            <td class="allCol" colspan="@length">Also in reverse</td>
+        </tr>
+            @for(var x=length-1; x>=0; x--)
+            {
+                <tr>
+                    @for(var z=0; z<length; z++)
+                    {
+                        <td class="cell">
+                            @if (x == z )
+                            {
+                                @Model.WordContent[length-1-z]
+                            }
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+   
+    </table>
+
+
+
+
+@section Styles{
+    <link href="@Url.Content("~/css/Transform/Display.css")" rel="stylesheet" type="text/css"/>
+}
+

@@ -1,0 +1,14 @@
+﻿.row{
+    display:flex;
+    flex-direction:column;
+ 
+}
+.cell{
+    
+    padding:0px 15px;
+}
+
+.allCol{
+    padding:10px 0px;
+
+}

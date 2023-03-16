@@ -1,0 +1,12 @@
+﻿@model  trackplan.Models.Word;
+@{
+    ViewData["Title"] = "TrackPlan test StefanAndrei P.";
+}
+
+<div class="">
+    <form  class="" asp-action="Display" asp-controller="Transform">
+        <label asp-for="WordContent">Insert your preferred word</label>
+        <input type="text" asp-for="WordContent"/>
+        <input type="submit" value="GO"/>
+    </form>
+</div>
